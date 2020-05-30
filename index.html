@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>VUE BASIC</title>
+  </head>
+  <body>
+    <div class="navegador">
+      <img src="img/logo.png" alt="logo">
+      <div class="enlaces">
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+      </div>
+
+      <div class="carrito-compras">
+        <p>Usuario</p>
+        <img src="img/carrito.png" alt="Carrito">
+      </div>
+    </div>
+
+    <div class="contenedor" id="app"> <!--{{INTERPOLACION}}-->
+      <h1>
+        <!--PODER MANDAR A LLAMARA CUALQUIER PROPIEDAD QUE ESTE DENTRO DE DATA-->
+        {{titulo}}</h1>
+        <!--ACCEDIENDO A LA INSTANCIA Y A LA PROPIEDAD EN LA CONSOLA (app.titulo = 'Otro titulo con Vue')-->
+
+
+        <!--ITERACION PARA ACCEDER A CADA UNO DE LOS ELEMENTOS DEL ARRAY-->
+        <!--ACCEDIENDO AL ARRAY Y CADA ELEMENTO
+        <ul>
+          <li v-for="fruta of frutas">{{fruta}}</li>
+        </ul> -->
+
+        <!--ACCEDIENDO A LOS OBJETOS Y SU PROPIEDAD CANTIDAD
+        <ul>
+          <li v-for="verdura of verduras">{{verdura.cantidad}}</li>
+        </ul> -->
+
+        <table>
+          <tr>
+            <td>Producto</td> <td>Precio</td> <td>Cantidad</td> <td>Cancelar</td>
+          </tr>
+          </table>
+
+        <!--ACCEDIENDO A LOS OBJETOS Y SU PROPIEDAD CANTIDAD Y NOMBRE Y USANDO IF-->
+
+          <div class="lista-compras" v-for="verdura of verduras">
+              <div class="lista-producto"> <img src="img/ropa.png" alt=""> {{verdura.nombre}} </div>
+              <!--MOSTRAMOS LA CANTIDAD EN INPUT Y LO DECIMOS QUE SERA DE TIPO NUMERICO-->
+              <div class="lista-precio"> ${{verdura.precio}}.00 </div>
+
+              <div class="lista-cantidad">
+              <button @click="verdura.cantidad = verdura.cantidad - 1"> - </button>
+              <input type="number" v-model.number="verdura.cantidad">
+              <!--{{verdura.cantidad}}-->
+              <!--AGREGAMOS JS AL BOTON Y AGREGAMOS UNO A CANTIDAD / verdura.cantidad++ -->
+              <button @click="verdura.cantidad = verdura.cantidad + 1"> + </button>
+
+            <span v-if="verdura.cantidad === 0"> - Sin Producto</span>
+          </div>
+
+          <div class="lista-cancelar">
+            <img src="img/cancelar.png" alt="">
+          </div>
+        </div>
+
+        <div class="total">
+          <div class="total-info">
+            <h3>TOTAL: ${{sumarVerduras}}.00 PESOS</h3>
+            <button type="button" name="button">Comprar</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="opinion">
+      <div class="opinion-info">
+        <h2>Encontraste lo que buscas, Cuentanos!</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <div class="opinion-correo">
+        <input type="text" name="" value="">
+        <input class="boton" type="button" name="" value="Enviar">
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-menu">
+        <div class="footer-navegador">
+          <h3>Navegacion</h3>
+          <a href="#">Enlace</a>
+          <a href="#">Enlace</a>
+          <a href="#">Enlace</a>
+          <a href="#">Enlace</a>
+        </div>
+
+        <div class="footer-categorias">
+          <h3>Categorias</h3>
+          <a href="#">Enlace</a>
+          <a href="#">Enlace</a>
+          <a href="#">Enlace</a>
+          <a href="#">Enlace</a>
+        </div>
+
+        <div class="footer-colleciones">
+          <h3>Colecciones</h3>
+          <a href="#">Enlace</a>
+          <a href="#">Enlace</a>
+          <a href="#">Enlace</a>
+          <a href="#">Enlace</a>
+        </div>
+      </div>
+
+      <div class="footer-informacion">
+        <h4>Direccion</h4>
+        <p>Correo</p>
+        <p>Numero</p>
+      </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vue.js"> </script>
+  </body>
+</html>

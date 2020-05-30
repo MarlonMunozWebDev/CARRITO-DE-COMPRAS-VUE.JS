@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
+}
+
+.navegador {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.navegador img {
+  height: 4rem;
+}
+
+
+.enlaces a {
+text-decoration: none;
+margin-right: 2rem;
+color: orange;
+font-weight: 700;
+}
+
+.carrito-compras {
+  display: flex;
+}
+
+.carrito-compras img {
+  height: 2rem;
+  transform: translateY(1rem);
+}
+
+.contenedor {
+  margin: 2rem 14rem;
+}
+
+table {
+  background: orange;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem 5rem;
+}
+
+table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lista-compras {
+  background: cora;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.lista-compras img {
+  height: 3rem;
+  margin-right: 2rem;
+}
+
+.lista-producto {
+  width: 28%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.lista-precio {
+  box-sizing: border-box;
+  width: 20%;
+  padding: 2rem 5rem;
+}
+
+.lista-cantidad {
+  padding: 2rem 0;
+  width: 30%;
+}
+
+.lista-cantidad input {
+  width: 1.5rem;
+}
+
+.lista-cancelar img {
+  padding: 1rem;
+  height: 2rem;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total button {
+  float: right;
+  background: orange;
+  font-family: 'Poppins',sans-serif;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+}
+
+.opinion {
+  display: flex;
+  justify-content: space-between;
+  height: 8rem;
+  background: orange;
+  padding: 3rem 10rem;
+}
+
+.opinion-correo input{
+  margin-top: 3rem;
+  height: 2rem;
+  border: none;
+  color: #fff;
+}
+
+.opinion-correo .boton {
+  font-family: 'Poppins',sans-serif;
+  background: #000;
+  height: 2.2rem;
+  padding: 0.5rem 1rem
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding: 0 10rem;
+  height: 14rem;
+}
+
+footer a {
+display: block;
+text-decoration: none;
+color: #000;
+}
+
+.footer-menu {
+  display: flex;
+}
+
+.footer-navegador {
+  margin-right: 5rem;
+}
+
+.footer-categorias {
+  margin-right: 5rem;
+}
